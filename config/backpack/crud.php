@@ -51,6 +51,7 @@ return [
          * Create Operation
          */
         'create' => [
+            
             // Define the size/looks of the content div for all CRUDs
             // To override per view use $this->crud->setCreateContentClass('class-string')
             'contentClass' => 'col-md-8 bold-labels',
