@@ -1,38 +1,24 @@
-<p align="left">
-    <br>
-    <a href="https://travis-ci.org/Laravel-Backpack/Demo" title="Build Status"><img src="https://img.shields.io/travis/Laravel-Backpack/Demo/master.svg?style=flat-square"></a>
-    <a href="https://styleci.io/repos/61656673" title="Style CI"><img src="https://styleci.io/repos/61656673/shield"></a>
-    <a href="https://scrutinizer-ci.com/g/laravel-backpack/demo" title="Quality Score"><img src="https://img.shields.io/scrutinizer/g/laravel-backpack/demo.svg?style=flat-square"></a>
-    <a href="https://scrutinizer-ci.com/g/laravel-backpack/demo/code-structure" title="Coverage Status"><img src="https://img.shields.io/scrutinizer/coverage/g/laravel-backpack/demo.svg?style=flat-square"></a>
-    <a href="LICENSE.md" title="Software License"><img src="https://img.shields.io/badge/License-dual-blue"></a>
-    <br><br>
-    <a href="https://backpackforlaravel.com/">Website</a> | 
-    <a href="https://backpackforlaravel.com/docs/">Documentation</a> | 
-    <a href="https://backpackforlaravel.com/addons">Add-ons</a> | 
-    <a href="https://backpackforlaravel.com/pricing">Pricing</a> |
-    <a href="https://backpackforlaravel.com/need-freelancer-or-development-team">Services</a> | 
-    <a href="https://stackoverflow.com/questions/tagged/backpack-for-laravel">Stack Overflow</a> | 
-    <a href="https://www.reddit.com/r/BackpackForLaravel/">Reddit</a> | 
-    <a href="https://backpackforlaravel.com/articles">Blog</a> | 
-    <a href="https://backpackforlaravel.com/newsletter">Newsletter</a>
-</p>
+# Apresentação demo do Laravel Backpack, utilizando uma crud simples
 
-# Backpack\Demo
+## Passos Utilizados após a instalação
+### Responsabilidade do próprio laravel com utilização de pacote adicional localhost
+- php artisan make:migration:schema create_testes_table --schema="name:string:unique,cidade:string"
+- php artisan migrate
+### Responsabilidade do Backpack
+- php artisan backpack:crud teste
+- php artisan serve pra mostrar o simples criado
+- Abrir TesteCrudController e deixar apenas o importante
+- Mostrar tela pronta
+- Voltar na crud e trocar a cidade pra ser uma opção de array pra exemplificar
+- CRUD::field('cidade')->type('select2_from_array')->options(['1' => 'Braço do Norte', '2' => 'Tubarão', '3' => 'Floripa', '4' => 'São Paulo']);
+- Apresentar
+- Na listagem fazer o mesmo: CRUD::column('cidade')->type('select_from_array')->options(['1' => 'Braço do Norte', '2' => 'Tubarão', '3' => 'Floripa', '4' => 'São Paulo']);
+- Apresentar
+- Informar ao final quanto tempo precisei para montar uma crud simples, mostrar os arquivos refletidos
 
-Laravel BackPack's demo, which includes all Backpack packages.
+---
 
-
-> ### Security updates and breaking changes
-> Please **[subscribe to the Backpack Newsletter](http://backpackforlaravel.com/newsletter)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
-
-
-![Example generated CRUD interface](https://backpackforlaravel.com/uploads/docs-4-0/getting_started/monster_crud_list_entries.png)
-
-
-## How to Use
-
-You can find the demo online at [demo.backpackforlaravel.com](https://demo.backpackforlaravel.com/admin), and play around. But some functionality is disabled, for security reasons (uploads, edits to users). If you want to run the demo without restrictions and/or make code edits and see how they're applied, you can install it on your own machine. See below.
-
+## Como usar
 
 ## Install
 
